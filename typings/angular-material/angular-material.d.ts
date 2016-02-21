@@ -63,10 +63,7 @@ declare module angular.material {
     interface IDialogOptions {
         templateUrl?: string;
         template?: string;
-        autoWrap?: boolean; // default: true
         targetEvent?: MouseEvent;
-        openFrom?: any;
-        closeTo?: any;
         scope?: angular.IScope; // default: new child scope
         preserveScope?: boolean; // default: false
         disableParentScroll?: boolean; // default: true
@@ -80,10 +77,8 @@ declare module angular.material {
         resolve?: {[index: string]: angular.IPromise<any>}
         controllerAs?: string;
         parent?: string|Element|JQuery; // default: root node
-        onShowing?: Function;
-        onComplete?: Function;
-        onRemoving?: Function;
         fullscreen?: boolean;
+        onComplete?: Function;
     }
 
     interface IDialogService {
@@ -229,7 +224,7 @@ declare module angular.material {
         setDefaultTheme(theme: string): void;
         alwaysWatchTheme(alwaysWatch: boolean): void;
     }
-
+    
     interface IDateLocaleProvider {
         months: string[];
         shortMonths: string[];
@@ -243,9 +238,5 @@ declare module angular.material {
         weekNumberFormatter(weekNumber: number): string;
         msgCalendar: string;
         msgOpenCalendar: string;
-    }
-
-    interface IMenuService {
-        hide(response?: any, options?: any): angular.IPromise<any>;
     }
 }

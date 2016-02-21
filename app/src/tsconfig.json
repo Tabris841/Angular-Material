@@ -1,7 +1,7 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "sourceMap": true,
-        "outDir": "../dist/"
-    }
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "outDir": "../dist/"
+  }
 }
